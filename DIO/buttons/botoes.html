@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="botoes.js"></script>
+</head>
+<!-- Eventos  -->
+<!-- tudo que segue apos o on -->
+
+<!--Ao carregar o body ira carregar a mensagem da funçao load-->
+<body onload="load()">
+    <!-- onclick é a funçao que leva para o javascript -->
+    <button type="button" onclick="clicou()">Clique Aqui</button>
+    
+    <button type="button" onclick="negrito()">Negrito</button>
+    <p id="negrito">Deixar em Negrito</p>
+
+    <!--Redireciona para outra pagina, abrindo uma nova aba-->
+    <button type="button" onclick="redirecionar()">Redirecionar</button>
+    
+    
+    <!-- onmouseover="" Comando para mudar mensagem ao passar o mouse em cima
+        onmouseout="" Comando ao tirar o mouse de cima 
+        
+### Metodo sem o getById -- this passa o proprio elemento como parametro -->
+    <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>  
+
+<!--### Metodo com o getById 
+    <p id="mousemove" onmouseover="trocar()" onmouseout="voltar()">Passe o mouse aqui</p> -->
+
+    <select onchange="valor(this)">
+        <option value="1">Valor 1 </option>
+        <option value="2">Valor 2 </option>
+        <option value="3">Valor 3 </option>
+    </select>
+
+</body>
+</html>
